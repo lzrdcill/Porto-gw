@@ -2,84 +2,50 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portofolio Lazuardi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lazuardi | Creative Digital Services</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- 🔝 NAVBAR -->
+  <!-- NAVBAR -->
   <nav>
     <ul class="navbar">
-      <li><a href="#tentang">Tentang</a></li>
-      <li><a href="#skill">Keahlian</a></li>
-      <li><a href="#portofolio">Portofolio</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-      <li><button id="toggle-dark" title="Ganti Tema">🌙</button></li>
+      <li><a href="services.html">Jasa</a></li>
+      <li><a href="products.html">Produk</a></li>
+      <li><a href="portfolio.html">Portofolio</a></li>
+      <li><a href="about.html">Tentang</a></li>
+      <li><a href="contact.html">Kontak</a></li>
+      <li><button id="toggle-dark">🌙</button></li>
     </ul>
   </nav>
 
-  <!-- 🧑 HEADER -->
-  <header>
+  <!-- HERO -->
+  <header class="hero colorful-bg">
+    <img src="gue.jpeg" alt="Foto Lazuardi" class="hero-img" />
     <h1>Lazuardi Mahdi Hakim</h1>
-    <p>Calon Data Analyst | Belajar Data Science</p>
+    <p>Jasa Prompt AI, Joki Game, Voice Over, Editing, dan Lainnya.</p>
+    <div class="hero-buttons">
+      <a href="services.html" class="btn primary">🔧 Lihat Jasa</a>
+      <a href="https://wa.me/6285691153662" target="_blank" class="btn outline">💬 Hubungi Saya</a>
+    </div>
   </header>
 
-  <!-- 📸 FOTO DIRI -->
-  <section id="foto-diri" class="reveal">
-    <div class="centered">
-      <img src="saya.jpg" alt="Foto Diri" class="foto">
-      <h2>Lazuardi Mahdi Hakim</h2>
-    </div>
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <h2>Solusi Digital Kreatif & Fleksibel</h2>
+    <p>Dari prompt AI yang powerful hingga joki game dan edit video berkualitas — semua bisa kamu pesan di satu tempat.</p>
+    <a href="services.html" class="btn secondary">Lihat Semua Layanan</a>
   </section>
 
-  <!-- 🧾 TENTANG -->
-  <section id="tentang" class="reveal">
-    <h2>Tentang Saya</h2>
-    <p>Saya sedang belajar data science dan ingin menjadi seorang data analyst profesional.</p>
-  </section>
-
-  <!-- 🛠 KEAHLIAN -->
-  <section id="skill" class="reveal">
-    <h2>Keahlian</h2>
-    <ul>
-      <li>Python</li>
-      <li>SQL</li>
-      <li>Data Visualization</li>
-    </ul>
-  </section>
-
-  <!-- 🗂 PORTOFOLIO -->
-  <section id="portofolio" class="reveal">
-    <h2>Proyek Saya</h2>
-
-    <div class="project">
-      <h3>Analisis Data Penjualan</h3>
-      <p>Menganalisis data penjualan bulanan menggunakan Python dan Pandas.</p>
-      <a href="https://github.com/namakamu/proyek-penjualan" target="_blank">Lihat Proyek</a>
-    </div>
-
-    <div class="project">
-      <h3>Dashboard Visualisasi</h3>
-      <p>Dashboard interaktif menggunakan Tableau untuk melihat performa produk.</p>
-      <a href="https://public.tableau.com/app/profile/namakamu/viz/dashboard-produk" target="_blank">Lihat Dashboard</a>
-    </div>
-  </section>
-
-  <!-- 📬 KONTAK -->
-  <section id="kontak" class="reveal">
-    <h2>Kontak</h2>
-    <p>Email: lazuardi@example.com</p>
-  </section>
-
-  <!-- 🦶 FOOTER -->
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Lazuardi Mahdi Hakim</p>
+    <p>&copy; 2025 Lazuardi Mahdi Hakim. Powered by kreativitas dan teknologi 🌈</p>
   </footer>
 
-  <!-- SCRIPT: Dark Mode + Animasi Scroll -->
+  <!-- SCRIPT -->
   <script>
     const toggle = document.getElementById('toggle-dark');
     toggle.addEventListener('click', () => {
@@ -87,15 +53,13 @@
       toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
     });
 
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   </script>
 
 </body>

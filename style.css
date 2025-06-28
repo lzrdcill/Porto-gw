@@ -1,207 +1,191 @@
-/* Font dan Variabel Warna */
+/* Google Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 :root {
-  --primary-color: #1e3a8a;
-  --background-color: #ffffff;
-  --section-bg: #f5f5f5;
-  --accent-color: #f472b6;
-  --text-color: #333;
-  --link-color: #2563eb;
+  --primary: #1e3a8a;       /* Biru utama */
+  --secondary: #9333ea;     /* Ungu */
+  --accent: #f472b6;        /* Pink */
+  --light: #f0f4ff;         /* Latar belakang terang */
+  --dark-bg: #121212;       /* Mode gelap */
+  --text-dark: #222;
+  --text-light: #f9f9f9;
+}
+
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
-  padding-bottom: 50px;
-  transition: background 0.4s, color 0.4s;
+  background: var(--light);
+  color: var(--text-dark);
+  transition: all 0.3s ease;
 }
 
-/* Navbar */
+body.dark {
+  background: var(--dark-bg);
+  color: var(--text-light);
+}
+
+/* NAVBAR */
 nav {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  background: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .navbar {
+  list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  list-style: none;
-  margin: 0;
-}
-
-.navbar li {
-  margin: 0 15px;
+  gap: 20px;
 }
 
 .navbar a {
+  color: var(--primary);
   text-decoration: none;
-  color: var(--primary-color);
   font-weight: 600;
-  font-size: 1em;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: var(--accent-color);
+  color: var(--accent);
 }
 
 #toggle-dark {
   background: none;
   border: none;
-  font-size: 1.2em;
   cursor: pointer;
-  transition: transform 0.2s;
-  color: var(--primary-color);
-}
-
-#toggle-dark:hover {
-  transform: scale(1.2);
-}
-
-/* Header */
-header {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5em;
-}
-
-header p {
   font-size: 1.2em;
-  color: #e0e0e0;
+  color: var(--primary);
 }
 
-/* Foto Diri */
-.foto {
-  width: 180px;
-  border-radius: 50%;
-  border: 6px solid var(--accent-color);
-  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+body.dark nav,
+body.dark #toggle-dark {
+  background: #1e1e1e;
+  color: var(--accent);
 }
 
-.centered {
+/* HERO SECTION */
+.hero {
   text-align: center;
-  margin: 30px 0;
+  padding: 60px 20px;
 }
 
-.centered h2 {
-  margin-top: 12px;
-  color: var(--primary-color);
+.hero-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid var(--accent);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
 }
 
-/* Section Umum */
-section {
-  background-color: var(--section-bg);
-  margin: 25px auto;
-  padding: 25px;
-  max-width: 900px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+.hero h1 {
+  font-size: 2.2em;
+  color: var(--primary);
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+.hero p {
+  font-size: 1.1em;
+  margin: 10px 0 20px;
+  color: var(--secondary);
 }
 
-section h2 {
-  color: var(--primary-color);
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Tombol */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.primary:hover {
+  background: var(--secondary);
+}
+
+.btn.outline {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+}
+
+.btn.outline:hover {
+  background: var(--primary);
+  color: white;
+}
+
+.btn.secondary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn.secondary:hover {
+  background: var(--secondary);
+}
+
+/* CTA Section */
+.cta-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e0f2fe, #fce7f3);
+  border-top: 1px solid #eee;
+}
+
+.cta-section h2 {
+  color: var(--primary);
   margin-bottom: 15px;
 }
 
-/* List */
-ul {
-  list-style: disc inside;
-  padding-left: 15px;
-}
-
-/* Proyek */
-.project {
-  background: white;
-  padding: 15px;
-  border-left: 6px solid var(--accent-color);
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
-}
-
-.project h3 {
-  color: var(--primary-color);
-  margin-bottom: 8px;
-}
-
-.project a {
-  color: var(--link-color);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-.project a:hover {
-  color: var(--accent-color);
-  text-decoration: underline;
+.cta-section p {
+  font-size: 1.05em;
+  color: var(--text-dark);
+  max-width: 600px;
+  margin: 0 auto 20px;
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #eee;
+  background: #fafafa;
   font-size: 0.9em;
   color: #666;
-  margin-top: 40px;
-}
-
-/* Dark Mode */
-body.dark {
-  background-color: #1a1a1a;
-  color: #eeeeee;
-}
-
-body.dark header,
-body.dark section {
-  background-color: #2a2a2a;
-  color: #ffffff;
-}
-
-body.dark .project {
-  background-color: #3a3a3a;
-  border-left-color: var(--accent-color);
-}
-
-body.dark a {
-  color: #90cdf4;
-}
-
-body.dark a:hover {
-  color: var(--accent-color);
 }
 
 body.dark footer {
-  background-color: #111;
+  background: #1e1e1e;
   color: #aaa;
 }
 
-body.dark #toggle-dark {
-  color: #f5f5f5;
+/* Animasi Scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
