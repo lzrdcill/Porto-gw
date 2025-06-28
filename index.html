@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portofolio Lazuardi</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- 🔝 NAVBAR + DARK MODE TOGGLE -->
+  <!-- 🔝 NAVBAR -->
   <nav>
     <ul class="navbar">
       <li><a href="#tentang">Tentang</a></li>
@@ -19,27 +21,28 @@
     </ul>
   </nav>
 
-  <!-- 🧑‍💼 HEADER -->
+  <!-- 🧑 HEADER -->
   <header>
     <h1>Lazuardi Mahdi Hakim</h1>
     <p>Calon Data Analyst | Belajar Data Science</p>
   </header>
 
   <!-- 📸 FOTO DIRI -->
-  <section id="foto-diri" style="text-align: center;">
-    <img src="saya.jpg" alt="Foto Diri" 
-         style="width: 180px; border-radius: 50%; margin-top: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); border: 6px solid #f472b6;" />
-    <h2 style="margin-top: 10px; color: #1e3a8a;">Lazuardi Mahdi Hakim</h2>
+  <section id="foto-diri" class="reveal">
+    <div class="centered">
+      <img src="saya.jpg" alt="Foto Diri" class="foto">
+      <h2>Lazuardi Mahdi Hakim</h2>
+    </div>
   </section>
 
   <!-- 🧾 TENTANG -->
-  <section id="tentang">
+  <section id="tentang" class="reveal">
     <h2>Tentang Saya</h2>
     <p>Saya sedang belajar data science dan ingin menjadi seorang data analyst profesional.</p>
   </section>
 
   <!-- 🛠 KEAHLIAN -->
-  <section id="skill">
+  <section id="skill" class="reveal">
     <h2>Keahlian</h2>
     <ul>
       <li>Python</li>
@@ -49,7 +52,7 @@
   </section>
 
   <!-- 🗂 PORTOFOLIO -->
-  <section id="portofolio">
+  <section id="portofolio" class="reveal">
     <h2>Proyek Saya</h2>
 
     <div class="project">
@@ -66,7 +69,7 @@
   </section>
 
   <!-- 📬 KONTAK -->
-  <section id="kontak">
+  <section id="kontak" class="reveal">
     <h2>Kontak</h2>
     <p>Email: lazuardi@example.com</p>
   </section>
@@ -76,13 +79,23 @@
     <p>&copy; 2025 Lazuardi Mahdi Hakim</p>
   </footer>
 
-  <!-- 🌙 DARK MODE SCRIPT -->
+  <!-- SCRIPT: Dark Mode + Animasi Scroll -->
   <script>
     const toggle = document.getElementById('toggle-dark');
     toggle.addEventListener('click', () => {
       document.body.classList.toggle('dark');
       toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
     });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   </script>
 
 </body>
