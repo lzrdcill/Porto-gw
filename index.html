@@ -8,13 +8,14 @@
 </head>
 <body>
 
-  <!-- 🔝 NAVBAR -->
+  <!-- 🔝 NAVBAR + DARK MODE TOGGLE -->
   <nav>
     <ul class="navbar">
       <li><a href="#tentang">Tentang</a></li>
       <li><a href="#skill">Keahlian</a></li>
       <li><a href="#portofolio">Portofolio</a></li>
       <li><a href="#kontak">Kontak</a></li>
+      <li><button id="toggle-dark" title="Ganti Tema">🌙</button></li>
     </ul>
   </nav>
 
@@ -74,6 +75,15 @@
   <footer>
     <p>&copy; 2025 Lazuardi Mahdi Hakim</p>
   </footer>
+
+  <!-- 🌙 DARK MODE SCRIPT -->
+  <script>
+    const toggle = document.getElementById('toggle-dark');
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+  </script>
 
 </body>
 </html>
