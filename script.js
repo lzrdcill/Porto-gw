@@ -1,0 +1,1 @@
+console.log("Halo, ini portofolio Lazuardi Mahdi Hakim!");
