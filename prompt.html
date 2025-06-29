@@ -6,13 +6,14 @@
   <title>Prompt AI - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-poppins">
 
   <!-- Navbar -->
-  <nav class="flex justify-between items-center px-6 py-4 bg-black">
+  <nav class="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-black gap-2">
     <h1 class="text-xl font-bold">LZ Corp</h1>
-    <ul class="flex gap-4">
+    <ul class="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
       <li><a href="index.html" class="hover:underline">Beranda</a></li>
       <li><a href="products.html" class="hover:underline">Produk</a></li>
       <li><a href="service.html" class="hover:underline">Layanan</a></li>
@@ -25,26 +26,28 @@
     <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-[-1]">
       <source src="tech.mp4" type="video/mp4" />
     </video>
-    <div class="bg-black bg-opacity-70 p-8 rounded-xl shadow-xl">
-      <h2 class="text-4xl font-bold mb-4">Prompt AI Khusus</h2>
-      <p class="text-lg mb-8 max-w-3xl mx-auto">
+    <div class="relative z-10 bg-black/70 p-6 md:p-12 rounded-xl max-w-6xl mx-auto shadow-xl">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Prompt AI Khusus</h2>
+      <p class="text-base md:text-lg mb-8 text-gray-300 max-w-3xl mx-auto leading-relaxed">
         Butuh prompt canggih untuk ChatGPT, Midjourney, DALL·E, atau Copilot? Kami siap bantu!
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-        <div class="bg-white/10 hover:scale-105 hover:bg-white/20 transition p-6 rounded-xl shadow-xl">
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white/10 hover:scale-105 hover:bg-white/20 transition-all duration-300 p-6 rounded-xl shadow-xl">
           <h3 class="text-xl font-bold mb-2">Prompt ChatGPT</h3>
-          <p>Optimasi interaksi GPT-4 dengan struktur prompt yang efisien dan kreatif.</p>
+          <p class="text-gray-300">Optimasi interaksi GPT-4 dengan struktur prompt yang efisien dan kreatif.</p>
         </div>
-        <div class="bg-white/10 hover:scale-105 hover:bg-white/20 transition p-6 rounded-xl shadow-xl">
+        <div class="bg-white/10 hover:scale-105 hover:bg-white/20 transition-all duration-300 p-6 rounded-xl shadow-xl">
           <h3 class="text-xl font-bold mb-2">Midjourney / DALL·E</h3>
-          <p>Gambar AI yang aesthetic & sesuai keinginan kamu.</p>
+          <p class="text-gray-300">Gambar AI yang aesthetic & sesuai keinginan kamu.</p>
         </div>
-        <div class="bg-white/10 hover:scale-105 hover:bg-white/20 transition p-6 rounded-xl shadow-xl">
+        <div class="bg-white/10 hover:scale-105 hover:bg-white/20 transition-all duration-300 p-6 rounded-xl shadow-xl">
           <h3 class="text-xl font-bold mb-2">Custom Prompt Khusus</h3>
-          <p>Prompt untuk tugas sekolah, pitch deck, copywriting, dll.</p>
+          <p class="text-gray-300">Prompt untuk tugas sekolah, pitch deck, copywriting, dll.</p>
         </div>
       </div>
-      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20ingin%20beli%20prompt%20AI%20kustom" class="inline-block mt-12 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition">
+
+      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20ingin%20beli%20prompt%20AI%20kustom" class="inline-block mt-12 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-all duration-300">
         Beli Prompt Sekarang
       </a>
     </div>

@@ -1,4 +1,3 @@
-<!-- service.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,11 +6,13 @@
   <title>Layanan - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-poppins">
-  <nav class="flex justify-between items-center px-6 py-4 bg-black">
+  <!-- Navbar -->
+  <nav class="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-black gap-2">
     <h1 class="text-xl font-bold">LZ Corp</h1>
-    <ul class="flex gap-4">
+    <ul class="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
       <li><a href="index.html" class="hover:underline">Beranda</a></li>
       <li><a href="products.html" class="hover:underline">Produk</a></li>
       <li><a href="service.html" class="underline font-semibold">Layanan</a></li>
@@ -19,41 +20,44 @@
     </ul>
   </nav>
 
+  <!-- Layanan Section -->
   <section class="py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Layanan Unggulan Kami</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <a href="prompt.html" class="service-card">
-        <h3 class="text-xl font-bold mb-2">Prompt AI</h3>
-        <p>Buat dan sesuaikan prompt canggih untuk AI generatif.</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Layanan Unggulan Kami</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <a href="prompt.html" class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+        <h3 class="text-xl font-bold mb-2 text-white">Prompt AI</h3>
+        <p class="text-gray-300">Buat dan sesuaikan prompt canggih untuk AI generatif.</p>
       </a>
-      <a href="pengetikan.html" class="service-card">
-        <h3 class="text-xl font-bold mb-2">Pengetikan Cepat</h3>
-        <p>Tugas, skripsi, laporan—dikerjakan cepat dan rapi.</p>
+      <a href="pengetikan.html" class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+        <h3 class="text-xl font-bold mb-2 text-white">Pengetikan Cepat</h3>
+        <p class="text-gray-300">Tugas, skripsi, laporan—dikerjakan cepat dan rapi.</p>
       </a>
-      <a href="desain.html" class="service-card">
-        <h3 class="text-xl font-bold mb-2">Desain & Editing</h3>
-        <p>CV, logo, video, reels untuk keperluan profesional.</p>
+      <a href="desain.html" class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+        <h3 class="text-xl font-bold mb-2 text-white">Desain & Editing</h3>
+        <p class="text-gray-300">CV, logo, video, reels untuk keperluan profesional.</p>
       </a>
-      <a href="voiceover.html" class="service-card">
-        <h3 class="text-xl font-bold mb-2">Voice Over / Nyanyi</h3>
-        <p>Rekam suara, jingle, atau lagu dengan kualitas studio.</p>
+      <a href="voiceover.html" class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+        <h3 class="text-xl font-bold mb-2 text-white">Voice Over / Nyanyi</h3>
+        <p class="text-gray-300">Rekam suara, jingle, atau lagu dengan kualitas studio.</p>
       </a>
-      <a href="jokitugas.html" class="service-card">
-        <h3 class="text-xl font-bold mb-2">Joki Tugas</h3>
-        <p>Bantuan pengerjaan tugas akademik dari SD hingga kuliah.</p>
+      <a href="jokitugas.html" class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+        <h3 class="text-xl font-bold mb-2 text-white">Joki Tugas</h3>
+        <p class="text-gray-300">Bantuan pengerjaan tugas akademik dari SD hingga kuliah.</p>
       </a>
-      <a href="jokigame.html" class="service-card">
-        <h3 class="text-xl font-bold mb-2">Joki Game</h3>
-        <p>Push rank dan farming untuk berbagai game online.</p>
+      <a href="jokigame.html" class="bg-white/5 backdrop-blur-md border border-white/10 p-6 rounded-xl shadow-lg hover:scale-105 transition-all duration-300">
+        <h3 class="text-xl font-bold mb-2 text-white">Joki Game</h3>
+        <p class="text-gray-300">Push rank dan farming untuk berbagai game online.</p>
       </a>
     </div>
+
     <div class="text-center mt-12">
-      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300">
         Hubungi via WhatsApp
       </a>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="text-center text-sm py-8 bg-black text-gray-400">
     &copy; 2025 LZ Corp.
   </footer>

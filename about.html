@@ -1,4 +1,3 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -7,11 +6,13 @@
   <title>Tentang Saya - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-poppins">
-  <nav class="flex justify-between items-center px-6 py-4 bg-black">
+  <!-- Navbar -->
+  <nav class="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-black gap-2">
     <h1 class="text-xl font-bold">LZ Corp</h1>
-    <ul class="flex gap-4">
+    <ul class="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
       <li><a href="index.html" class="hover:underline">Beranda</a></li>
       <li><a href="products.html" class="hover:underline">Produk</a></li>
       <li><a href="service.html" class="hover:underline">Layanan</a></li>
@@ -19,17 +20,19 @@
     </ul>
   </nav>
 
+  <!-- Konten Tentang -->
   <section class="py-20 px-6 text-center max-w-3xl mx-auto">
-    <img src="gue.jpeg" alt="Foto Saya" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-lg" />
-    <h2 class="text-3xl font-bold mb-4">Hai, Saya Lazuardi Mahdi Hakim</h2>
-    <p class="text-lg text-gray-300 mb-6">
+    <img src="gue.jpeg" alt="Foto Saya" class="w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto mb-6 object-cover shadow-lg animate-fade-in" />
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">Hai, Saya Lazuardi Mahdi Hakim</h2>
+    <p class="text-base md:text-lg text-gray-300 mb-6 leading-relaxed">
       Saya seorang kreator digital dengan keahlian di bidang pengetikan cepat, desain grafis, pembuatan prompt AI, editing multimedia, voice over, serta joki tugas dan game. Website ini saya bangun untuk membantu Anda mendapatkan layanan digital terbaik secara cepat, aman, dan berkualitas.
     </p>
-    <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+    <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300">
       Hubungi Saya via WhatsApp
     </a>
   </section>
 
+  <!-- Footer -->
   <footer class="text-center text-sm py-8 bg-black text-gray-400">
     &copy; 2025 LZ Corp.
   </footer>
