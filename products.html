@@ -1,34 +1,73 @@
+<!-- product.html -->
 <!DOCTYPE html>
-<html lang="id" class="transition-colors duration-300">
+<html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produk | Lazuardi</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produk Digital - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-white text-black dark:bg-black dark:text-white">
+  <!-- Navbar -->
+  <div class="flex justify-between items-center px-6 py-4">
+    <nav class="space-x-4">
+      <a href="index.html" class="hover:underline">Beranda</a>
+      <a href="product.html" class="font-bold underline">Produk</a>
+      <a href="service.html" class="hover:underline">Layanan</a>
+      <a href="about.html" class="hover:underline">Tentang</a>
+    </nav>
+    <img src="gue.jpeg" alt="Foto Profil" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
+  </div>
 
-  <nav class="text-center p-4 space-x-4">
-    <a href="index.html" class="hover:underline">Beranda</a>
-    <a href="product.html" class="font-bold underline">Produk</a>
-    <a href="service.html" class="hover:underline">Layanan</a>
-  </nav>
+  <main class="py-20 px-6">
+    <h1 class="text-3xl font-bold text-center mb-10">Produk Digital Kami</h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-  <main class="max-w-4xl mx-auto py-16 px-6">
-    <h1 class="text-3xl font-bold mb-8 text-center">Produk Digital</h1>
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow card-hover">
-        <h2 class="text-xl font-bold">Prompt AI</h2>
-        <p>Prompt Midjourney, ChatGPT, Notion AI siap pakai.</p>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center">
+        <img src="prompt.jpg" alt="Prompt AI" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h2 class="text-xl font-bold mb-1">Prompt AI</h2>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Kumpulan prompt siap pakai untuk GPT, Midjourney, dsb.</p>
+        <p class="font-semibold text-green-600 dark:text-green-400 mb-4">Rp 25.000</p>
+        <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20mau%20beli%20Prompt%20AI"
+           class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full text-sm transition">
+           Pesan Sekarang
+        </a>
       </div>
-      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow card-hover">
-        <h2 class="text-xl font-bold">Template Desain</h2>
-        <p>Canva, Figma, dan PowerPoint editable premium.</p>
+
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center">
+        <img src="cv.jpg" alt="Template CV" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h2 class="text-xl font-bold mb-1">Template CV</h2>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Template desain CV profesional untuk melamar kerja.</p>
+        <p class="font-semibold text-green-600 dark:text-green-400 mb-4">Rp 15.000</p>
+        <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20mau%20beli%20Template%20CV"
+           class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full text-sm transition">
+           Pesan Sekarang
+        </a>
       </div>
+
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center">
+        <img src="ebook.jpg" alt="Ebook AI" class="w-full h-40 object-cover rounded-lg mb-4">
+        <h2 class="text-xl font-bold mb-1">Panduan AI</h2>
+        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">E-book mudah dipahami untuk pemula AI & ChatGPT.</p>
+        <p class="font-semibold text-green-600 dark:text-green-400 mb-4">Rp 20.000</p>
+        <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20mau%20beli%20Panduan%20AI"
+           class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full text-sm transition">
+           Pesan Sekarang
+        </a>
+      </div>
+
+    </div>
+    <div class="text-center mt-12">
+      <a href="https://wa.me/6285691153662"
+         class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+        Lihat Semua Produk via WhatsApp
+      </a>
     </div>
   </main>
 
-  <script src="script.js"></script>
+  <footer class="text-center text-sm py-8 text-gray-600 dark:text-gray-400">
+    &copy; 2025 LZ corp.
+  </footer>
 </body>
 </html>
