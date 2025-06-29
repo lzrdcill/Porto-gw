@@ -1,15 +1,16 @@
 // script.js
-AOS.init();
 
+// Efek Ketik Animasi
 const teks = [
-  "Jasa Digital Terbaik",
-  "Joki Tugas & Game",
-  "Desain & Editing",
-  "Prompt AI",
-  "Voice Over"
+  "Jasa Digital Modern",
+  "Prompt AI & Desain",
+  "Joki Game & Tugas",
+  "Voice Over & Editing"
 ];
 
-let i = 0, j = 0, isDeleting = false;
+let i = 0;
+let j = 0;
+let isDeleting = false;
 const speed = 120;
 const el = document.getElementById("typing");
 
@@ -28,5 +29,4 @@ function typeEffect() {
 
   setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
 }
-
 typeEffect();
