@@ -1,81 +1,151 @@
-<!-- product.html -->
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="transition-colors duration-300">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Produk Digital - LZ Corp</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lazuardi | Jasa Digital</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Style -->
   <link rel="stylesheet" href="style.css">
+
   <style>
-    .card-3d {
-      transition: all 0.3s ease;
-      transform-style: preserve-3d;
+    body { font-family: 'Poppins', sans-serif; }
+
+    .gradient-bg {
+      background: linear-gradient(-45deg, #0ea5e9, #9333ea, #22c55e, #f97316);
+      background-size: 600% 600%;
+      animation: gradient 15s ease infinite;
     }
-    .card-3d:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      background: linear-gradient(135deg, #6366f1, #ec4899);
-      color: white;
+
+    @keyframes gradient {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .typewriter::after {
+      content: "|";
+      animation: blink 1s step-start infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    video.bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
   </style>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
 </head>
+
 <body class="bg-white text-black dark:bg-black dark:text-white">
-  <!-- Navbar -->
-  <div class="flex justify-between items-center px-6 py-4">
-    <nav class="space-x-4">
-      <a href="index.html" class="hover:underline">Beranda</a>
-      <a href="product.html" class="font-bold underline">Produk</a>
-      <a href="service.html" class="hover:underline">Layanan</a>
-      <a href="about.html" class="hover:underline">Tentang</a>
-    </nav>
-    <img src="gue.jpeg" alt="Foto Profil" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow">
-  </div>
+ 
+  <!-- Hero dengan Video -->
+  <section class="relative text-center py-32 px-4 text-white overflow-hidden">
+    <!-- Video Latar Belakang -->
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="tech.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
 
-  <main class="py-20 px-6">
-    <h1 class="text-3xl font-bold text-center mb-10">Produk Digital Kami</h1>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
-      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center card-3d">
-        <img src="prompt.jpg" alt="Prompt AI" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h2 class="text-xl font-bold mb-1">Prompt AI</h2>
-        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Kumpulan prompt siap pakai untuk GPT, Midjourney, dsb.</p>
-        <p class="font-semibold text-green-600 dark:text-green-400 mb-4">Rp 25.000</p>
-        <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20mau%20beli%20Prompt%20AI" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full text-sm transition">
-           Pesan Sekarang
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center card-3d">
-        <img src="cv.jpg" alt="Template CV" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h2 class="text-xl font-bold mb-1">Template CV</h2>
-        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">Template desain CV profesional untuk melamar kerja.</p>
-        <p class="font-semibold text-green-600 dark:text-green-400 mb-4">Rp 15.000</p>
-        <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20mau%20beli%20Template%20CV" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full text-sm transition">
-           Pesan Sekarang
-        </a>
-      </div>
-
-      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg text-center card-3d">
-        <img src="ebook.jpg" alt="Ebook AI" class="w-full h-40 object-cover rounded-lg mb-4">
-        <h2 class="text-xl font-bold mb-1">Panduan AI</h2>
-        <p class="text-sm mb-2 text-gray-600 dark:text-gray-300">E-book mudah dipahami untuk pemula AI & ChatGPT.</p>
-        <p class="font-semibold text-green-600 dark:text-green-400 mb-4">Rp 20.000</p>
-        <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20mau%20beli%20Panduan%20AI" class="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full text-sm transition">
-           Pesan Sekarang
-        </a>
-      </div>
-
+    <!-- Konten -->
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        <span id="typing" class="typewriter"></span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-100 max-w-xl mx-auto">
+        Jual Prompt AI, Desain, Pengetikan, Editing, Joki & Voice Service.
+      </p>
     </div>
-    <div class="text-center mt-12">
-      <a href="https://wa.me/6285691153662" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
-        Lihat Semua Produk via WhatsApp
+  </section>
+
+  <!-- Layanan -->
+  <section class="py-20 px-6 bg-gray-100 dark:bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-10">Layanan Kami</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-black dark:text-white max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover transition" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold mb-2">Prompt AI</h3>
+        <p>Kustom prompt GPT, Midjourney, DALL·E, dsb.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover transition" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-bold mb-2">Pengetikan Cepat</h3>
+        <p>Makalah, laporan, tugas kuliah.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover transition" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-bold mb-2">Desain & Editing</h3>
+        <p>Logo, video, reels, TikTok, CV, presentasi.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover transition" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-xl font-bold mb-2">Nyanyi / VO</h3>
+        <p>Voice over & rekaman lagu/konten kamu.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover transition" data-aos="fade-up" data-aos-delay="500">
+        <h3 class="text-xl font-bold mb-2">Joki Tugas</h3>
+        <p>Selesaikan tugas sekolah/kuliah dengan cepat & rapi.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover transition" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="text-xl font-bold mb-2">Joki Game</h3>
+        <p>Push rank, farming, leveling berbagai game populer.</p>
+      </div>
+    </div>
+    <div class="text-center mt-12" data-aos="zoom-in">
+      <a href="https://wa.me/6285691153662?text=Halo%20saya%20tertarik%20dengan%20jasa%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+        Pesan via WhatsApp
       </a>
     </div>
-  </main>
+  </section>
 
-  <footer class="text-center text-sm py-8 text-gray-600 dark:text-gray-400">
+  <!-- Footer -->
+  <footer class="text-center text-sm py-8 bg-white dark:bg-black text-gray-600 dark:text-gray-400">
     &copy; 2025 LZ corp.
   </footer>
+
+  <script>
+    AOS.init();
+    const teks = ["Jasa Digital Terbaik", "Joki Tugas & Game", "Desain & Editing", "Prompt AI", "Voice Over"];
+    let i = 0, j = 0, isDeleting = false;
+    const speed = 120;
+    const el = document.getElementById("typing");
+    function typeEffect() {
+      const current = teks[i];
+      el.textContent = current.substring(0, j);
+      if (!isDeleting && j < current.length) j++;
+      else if (isDeleting && j > 0) j--;
+      else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) i = (i + 1) % teks.length;
+      }
+      setTimeout(typeEffect, isDeleting ? speed / 2 : speed);
+    }
+    typeEffect();
+  </script>
 </body>
 </html>
