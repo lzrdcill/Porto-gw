@@ -6,43 +6,53 @@
   <title>Joki Game - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
-<body class="relative text-white bg-black overflow-x-hidden">
-  <!-- Video Background -->
-  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-10">
-    <source src="tech.mp4" type="video/mp4">
-  </video>
-  <div class="absolute inset-0 bg-black bg-opacity-60 -z-10"></div>
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <header class="w-full fixed top-0 left-0 z-50 bg-black bg-opacity-60 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-white font-bold text-lg">LZ Corp</div>
+      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">☰</button>
+      <nav id="menu" class="hidden md:flex gap-6 font-semibold text-white text-sm md:text-base">
+        <a href="index.html" class="nav-3d">Beranda</a>
+        <a href="product.html" class="nav-3d">Produk</a>
+        <a href="service.html" class="nav-3d">Layanan</a>
+        <a href="about.html" class="nav-3d">Tentang</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2 nav-3d">Beranda</a>
+      <a href="product.html" class="block py-2 nav-3d">Produk</a>
+      <a href="service.html" class="block py-2 nav-3d">Layanan</a>
+      <a href="about.html" class="block py-2 nav-3d">Tentang</a>
+    </div>
+  </header>
 
-  <!-- Navigasi -->
-  <nav class="w-full py-4 px-8 flex justify-end space-x-6 text-lg font-semibold z-10">
-    <a href="index.html" class="nav-3d">Beranda</a>
-    <a href="product.html" class="nav-3d">Produk</a>
-    <a href="service.html" class="nav-3d">Layanan</a>
-    <a href="about.html" class="nav-3d">Tentang</a>
-  </nav>
-
-  <!-- Konten Joki Game -->
-  <main class="py-24 px-6 max-w-3xl mx-auto text-center">
-    <h1 class="text-3xl font-bold mb-6">Jasa Joki Game</h1>
-    <p class="mb-6">Lelah push rank atau grind item sendirian? Serahkan pada kami! Kami menyediakan layanan joki game cepat dan aman untuk berbagai jenis game online populer.</p>
-
-    <ul class="list-disc list-inside text-left space-y-2 mb-6">
-      <li>Push rank (MLBB, PUBG, Valorant, dll.)</li>
-      <li>Farming item / coin / diamond</li>
-      <li>Leveling akun atau misi event</li>
-      <li>Login aman & kerahasiaan terjaga</li>
+  <!-- Konten Utama -->
+  <main class="pt-28 pb-20 px-6 max-w-3xl mx-auto backdrop-blur-sm bg-white/10 rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold mb-4 text-center">Layanan Joki Game</h1>
+    <p class="mb-4 text-justify">
+      Tingkatkan level permainanmu tanpa repot dengan layanan <strong>joki game</strong> dari LZ Corp. Aman, cepat, dan terpercaya oleh pemain berpengalaman.
+    </p>
+    <ul class="list-disc ml-6 space-y-1 mb-4">
+      <li>Push rank Mobile Legends, PUBG, Valorant, Free Fire</li>
+      <li>Farming item, level, atau resource dalam game</li>
+      <li>Login aman tanpa ganti akun utama</li>
+      <li>Paket harian, mingguan, atau musiman tersedia</li>
     </ul>
-
-    <p class="mb-6">Harga mulai dari <strong>Rp 15.000</strong> per sesi permainan.</p>
-
-    <a href="https://wa.me/6285691153662?text=Halo,%20saya%20ingin%20pesan%20Joki%20Game" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
-      Pesan via WhatsApp
-    </a>
+    <p class="text-justify">
+      Kami menjaga kerahasiaan dan keamanan akun Anda. Layanan ini cocok bagi Anda yang ingin hasil maksimal tanpa menghabiskan banyak waktu bermain.
+    </p>
+    <div class="text-center mt-8">
+      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20joki%20game"
+         class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+        Sewa Joki Sekarang
+      </a>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm py-6 text-gray-300">
+  <footer class="text-center text-sm py-8 text-gray-400">
     &copy; 2025 LZ corp.
   </footer>
 </body>

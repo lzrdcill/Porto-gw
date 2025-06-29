@@ -6,43 +6,53 @@
   <title>Desain & Editing - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
-<body class="relative text-white bg-black overflow-x-hidden">
-  <!-- Video Background -->
-  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-10">
-    <source src="tech.mp4" type="video/mp4">
-  </video>
-  <div class="absolute inset-0 bg-black bg-opacity-60 -z-10"></div>
+<body class="bg-black text-white">
+  <!-- Navbar -->
+  <header class="w-full fixed top-0 left-0 z-50 bg-black bg-opacity-60 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="text-white font-bold text-lg">LZ Corp</div>
+      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">☰</button>
+      <nav id="menu" class="hidden md:flex gap-6 font-semibold text-white text-sm md:text-base">
+        <a href="index.html" class="nav-3d">Beranda</a>
+        <a href="product.html" class="nav-3d">Produk</a>
+        <a href="service.html" class="nav-3d">Layanan</a>
+        <a href="about.html" class="nav-3d">Tentang</a>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="index.html" class="block py-2 nav-3d">Beranda</a>
+      <a href="product.html" class="block py-2 nav-3d">Produk</a>
+      <a href="service.html" class="block py-2 nav-3d">Layanan</a>
+      <a href="about.html" class="block py-2 nav-3d">Tentang</a>
+    </div>
+  </header>
 
-  <!-- Navigasi -->
-  <nav class="w-full py-4 px-8 flex justify-end space-x-6 text-lg font-semibold z-10">
-    <a href="index.html" class="nav-3d">Beranda</a>
-    <a href="product.html" class="nav-3d">Produk</a>
-    <a href="service.html" class="nav-3d">Layanan</a>
-    <a href="about.html" class="nav-3d">Tentang</a>
-  </nav>
-
-  <!-- Konten Desain -->
-  <main class="py-24 px-6 max-w-3xl mx-auto text-center">
-    <h1 class="text-3xl font-bold mb-6">Desain & Editing Konten</h1>
-    <p class="mb-6">Kami bantu kamu menciptakan visual profesional untuk kebutuhan personal atau bisnis. Mulai dari desain logo, CV, hingga edit video kreatif.</p>
-
-    <ul class="list-disc list-inside text-left space-y-2 mb-6">
-      <li>Desain logo, presentasi, pamflet, dan CV</li>
-      <li>Editing video pendek: reels, TikTok, YouTube shorts</li>
-      <li>Edit foto: retouch, background removal, efek</li>
-      <li>Bisa request gaya atau tema tertentu</li>
+  <!-- Konten Utama -->
+  <main class="pt-28 pb-20 px-6 max-w-3xl mx-auto backdrop-blur-sm bg-white/10 rounded-xl shadow-lg">
+    <h1 class="text-3xl font-bold mb-4 text-center">Layanan Desain & Editing</h1>
+    <p class="mb-4 text-justify">
+      LZ Corp menyediakan layanan <strong>desain grafis</strong> dan <strong>editing multimedia</strong> profesional untuk mendukung kebutuhan personal maupun bisnis Anda. Beberapa layanan unggulan kami:
+    </p>
+    <ul class="list-disc ml-6 space-y-1 mb-4">
+      <li>Desain logo, banner, dan presentasi</li>
+      <li>Edit video (Reels, TikTok, YouTube)</li>
+      <li>Edit foto profesional dan produk</li>
+      <li>Desain CV, undangan digital, poster</li>
     </ul>
-
-    <p class="mb-6">Harga mulai dari <strong>Rp 20.000</strong> per desain/edit.</p>
-
-    <a href="https://wa.me/6285691153662?text=Halo,%20saya%20ingin%20pesan%20Desain%20atau%20Editing" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
-      Pesan via WhatsApp
-    </a>
+    <p class="text-justify">
+      Kami menggunakan software desain terkini dan memastikan setiap hasil kerja sesuai dengan keinginan Anda, baik dari segi estetika maupun fungsionalitas.
+    </p>
+    <div class="text-center mt-8">
+      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20desain%20dan%20editing"
+         class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+        Konsultasi Gratis
+      </a>
+    </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm py-6 text-gray-300">
+  <footer class="text-center text-sm py-8 text-gray-400">
     &copy; 2025 LZ corp.
   </footer>
 </body>
