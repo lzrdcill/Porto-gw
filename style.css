@@ -31,15 +31,14 @@ body {
 .dark .text-black { color: white !important; }
 .dark .shadow-lg { box-shadow: 0 4px 14px rgba(255, 255, 255, 0.1); }
 
-/* Efek hover kartu */
+/* Efek hover kartu 3D */
 .card-hover {
   cursor: pointer;
+  perspective: 800px;
   transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.4s ease;
-  transform-style: preserve-3d;
-  will-change: transform;
 }
 .card-hover:hover {
-  transform: perspective(800px) rotateX(5deg) rotateY(5deg) scale(1.05);
+  transform: rotateX(5deg) rotateY(5deg) scale(1.05);
   background-color: rgba(255, 255, 255, 0.15);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
