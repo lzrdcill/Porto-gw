@@ -1,51 +1,37 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tentang Kami - LZ Corp</title>
+  <title>Tentang Saya - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-black dark:bg-black dark:text-white">
+<body class="bg-black text-white font-poppins">
+  <nav class="flex justify-between items-center px-6 py-4 bg-black">
+    <h1 class="text-xl font-bold">LZ Corp</h1>
+    <ul class="flex gap-4">
+      <li><a href="index.html" class="hover:underline">Beranda</a></li>
+      <li><a href="products.html" class="hover:underline">Produk</a></li>
+      <li><a href="service.html" class="hover:underline">Layanan</a></li>
+      <li><a href="about.html" class="underline font-semibold">Tentang</a></li>
+    </ul>
+  </nav>
 
-  <!-- Navbar dengan Hamburger -->
-  <header class="w-full fixed top-0 left-0 z-50 bg-black bg-opacity-60 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="text-white font-bold text-lg">LZ Corp</div>
-      <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
-        ☰
-      </button>
-      <nav id="menu" class="hidden md:flex gap-6 font-semibold text-white text-sm md:text-base">
-        <a href="index.html" class="nav-3d">Beranda</a>
-        <a href="product.html" class="nav-3d">Produk</a>
-        <a href="service.html" class="nav-3d">Layanan</a>
-        <a href="about.html" class="nav-3d font-bold underline">Tentang</a>
-      </nav>
-    </div>
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-      <a href="index.html" class="block py-2 nav-3d">Beranda</a>
-      <a href="product.html" class="block py-2 nav-3d">Produk</a>
-      <a href="service.html" class="block py-2 nav-3d">Layanan</a>
-      <a href="about.html" class="block py-2 nav-3d font-bold underline">Tentang</a>
-    </div>
-  </header>
+  <section class="py-20 px-6 text-center max-w-3xl mx-auto">
+    <img src="gue.jpeg" alt="Foto Saya" class="w-40 h-40 rounded-full mx-auto mb-6 object-cover shadow-lg" />
+    <h2 class="text-3xl font-bold mb-4">Hai, Saya Lazuardi Mahdi Hakim</h2>
+    <p class="text-lg text-gray-300 mb-6">
+      Saya seorang kreator digital dengan keahlian di bidang pengetikan cepat, desain grafis, pembuatan prompt AI, editing multimedia, voice over, serta joki tugas dan game. Website ini saya bangun untuk membantu Anda mendapatkan layanan digital terbaik secara cepat, aman, dan berkualitas.
+    </p>
+    <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20ingin%20tahu%20lebih%20banyak%20tentang%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+      Hubungi Saya via WhatsApp
+    </a>
+  </section>
 
-  <main class="pt-28 py-20 px-6 max-w-4xl mx-auto">
-    <h1 class="text-3xl font-bold text-center mb-6">Tentang Saya</h1>
-    <div class="flex flex-col md:flex-row items-center gap-6">
-      <img src="gue.jpeg" alt="Foto Saya" class="w-48 h-48 rounded-full object-cover shadow-lg">
-      <div>
-        <p class="mb-4">Halo! Saya Lazuardi Mahdi Hakim, pendiri LZ Corp — platform layanan digital modern yang menawarkan berbagai jasa seperti pembuatan prompt AI, desain grafis, editing foto/video, voice over, pengetikan cepat, serta joki tugas dan game.</p>
-        <p>Saya menciptakan website ini untuk memudahkan Anda mendapatkan layanan digital berkualitas tinggi, responsif, dan terjangkau. Dengan pendekatan personal dan hasil profesional, saya berkomitmen membantu kebutuhan digital Anda secara maksimal.</p>
-      </div>
-    </div>
-  </main>
-
-  <footer class="text-center text-sm py-8 text-gray-600 dark:text-gray-400">
-    &copy; 2025 LZ corp.
+  <footer class="text-center text-sm py-8 bg-black text-gray-400">
+    &copy; 2025 LZ Corp.
   </footer>
-
 </body>
 </html>

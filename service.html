@@ -1,55 +1,61 @@
+<!-- service.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Layanan Jasa - LZ Corp</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Layanan - LZ Corp</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-black dark:bg-black dark:text-white">
-  <nav class="text-center p-4 space-x-4">
-    <a href="index.html" class="hover:underline">Beranda</a>
-    <a href="product.html" class="hover:underline">Produk</a>
-    <a href="service.html" class="font-bold underline">Layanan</a>
+<body class="bg-black text-white font-poppins">
+  <nav class="flex justify-between items-center px-6 py-4 bg-black">
+    <h1 class="text-xl font-bold">LZ Corp</h1>
+    <ul class="flex gap-4">
+      <li><a href="index.html" class="hover:underline">Beranda</a></li>
+      <li><a href="products.html" class="hover:underline">Produk</a></li>
+      <li><a href="service.html" class="underline font-semibold">Layanan</a></li>
+      <li><a href="about.html" class="hover:underline">Tentang</a></li>
+    </ul>
   </nav>
-  <main class="py-20 px-6">
-    <h1 class="text-3xl font-bold text-center mb-10">Layanan Jasa Kami</h1>
+
+  <section class="py-20 px-6">
+    <h2 class="text-3xl font-bold text-center mb-10">Layanan Unggulan Kami</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-      <a href="layanan-prompt.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
-        <h2 class="text-xl font-bold mb-2">Prompt AI</h2>
-        <p>Kustom prompt GPT, Midjourney, DALL·E, dsb.</p>
+      <a href="prompt.html" class="service-card">
+        <h3 class="text-xl font-bold mb-2">Prompt AI</h3>
+        <p>Buat dan sesuaikan prompt canggih untuk AI generatif.</p>
       </a>
-      <a href="layanan-ngetik.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
-        <h2 class="text-xl font-bold mb-2">Pengetikan Cepat</h2>
-        <p>Makalah, laporan, tugas kuliah.</p>
+      <a href="pengetikan.html" class="service-card">
+        <h3 class="text-xl font-bold mb-2">Pengetikan Cepat</h3>
+        <p>Tugas, skripsi, laporan—dikerjakan cepat dan rapi.</p>
       </a>
-      <a href="layanan-desain.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
-        <h2 class="text-xl font-bold mb-2">Desain & Editing</h2>
-        <p>Logo, video, reels, TikTok, CV, presentasi.</p>
+      <a href="desain.html" class="service-card">
+        <h3 class="text-xl font-bold mb-2">Desain & Editing</h3>
+        <p>CV, logo, video, reels untuk keperluan profesional.</p>
       </a>
-      <a href="layanan-nyanyi.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
-        <h2 class="text-xl font-bold mb-2">Nyanyi / VO</h2>
-        <p>Voice over & rekaman lagu/konten kamu.</p>
+      <a href="voiceover.html" class="service-card">
+        <h3 class="text-xl font-bold mb-2">Voice Over / Nyanyi</h3>
+        <p>Rekam suara, jingle, atau lagu dengan kualitas studio.</p>
       </a>
-      <a href="layanan-joki-tugas.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
-        <h2 class="text-xl font-bold mb-2">Joki Tugas</h2>
-        <p>Selesaikan tugas sekolah/kuliah dengan cepat & rapi.</p>
+      <a href="jokitugas.html" class="service-card">
+        <h3 class="text-xl font-bold mb-2">Joki Tugas</h3>
+        <p>Bantuan pengerjaan tugas akademik dari SD hingga kuliah.</p>
       </a>
-      <a href="layanan-joki-game.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
-        <h2 class="text-xl font-bold mb-2">Joki Game</h2>
-        <p>Push rank, farming, leveling berbagai game populer.</p>
+      <a href="jokigame.html" class="service-card">
+        <h3 class="text-xl font-bold mb-2">Joki Game</h3>
+        <p>Push rank dan farming untuk berbagai game online.</p>
       </a>
     </div>
     <div class="text-center mt-12">
-      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Anda"
-         class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+      <a href="https://wa.me/6285691153662?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
         Hubungi via WhatsApp
       </a>
     </div>
-  </main>
-  <footer class="text-center text-sm py-8 text-gray-600 dark:text-gray-400">
-    &copy; 2025 LZ corp.
+  </section>
+
+  <footer class="text-center text-sm py-8 bg-black text-gray-400">
+    &copy; 2025 LZ Corp.
   </footer>
 </body>
 </html>
