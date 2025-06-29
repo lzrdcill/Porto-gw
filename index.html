@@ -3,63 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lazuardi | Creative Digital Services</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Jasa Digital Lazuardi</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Font (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
 </head>
-<body>
+<body class="bg-black text-white">
 
-  <!-- NAVBAR -->
-  <nav>
-    <ul class="navbar">
-      <li><a href="services.html">Jasa</a></li>
-      <li><a href="products.html">Produk</a></li>
-      <li><a href="portfolio.html">Portofolio</a></li>
-      <li><a href="about.html">Tentang</a></li>
-      <li><a href="contact.html">Kontak</a></li>
-      <li><button id="toggle-dark">🌙</button></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <header class="hero colorful-bg">
-    <img src="gue.jpeg" alt="Foto Lazuardi" class="hero-img" />
-    <h1>Lazuardi Mahdi Hakim</h1>
-    <p>Jasa Prompt AI, Joki Game, Voice Over, Editing, dan Lainnya.</p>
-    <div class="hero-buttons">
-      <a href="services.html" class="btn primary">🔧 Lihat Jasa</a>
-      <a href="https://wa.me/6285691153662" target="_blank" class="btn outline">💬 Hubungi Saya</a>
-    </div>
-  </header>
-
-  <!-- CTA -->
-  <section class="cta-section reveal">
-    <h2>Solusi Digital Kreatif & Fleksibel</h2>
-    <p>Dari prompt AI yang powerful hingga joki game dan edit video berkualitas — semua bisa kamu pesan di satu tempat.</p>
-    <a href="services.html" class="btn secondary">Lihat Semua Layanan</a>
+  <!-- Hero Section -->
+  <section class="text-center py-32 px-4 bg-gradient-to-b from-black to-gray-900">
+    <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-bounce">
+      Jasa Digital Terlengkap
+    </h1>
+    <p class="text-lg md:text-2xl max-w-2xl mx-auto text-gray-300">
+      Prompt AI, Pengetikan, Desain, Nyanyi, Editing, Joki Tugas & Game — semua dalam satu tempat.
+    </p>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>&copy; 2025 Lazuardi Mahdi Hakim. Powered by kreativitas dan teknologi 🌈</p>
+  <!-- Layanan Section -->
+  <section class="py-20 px-6 bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-10">Layanan Kami</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-black max-w-6xl mx-auto">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-bold mb-2">Prompt AI</h3>
+        <p>Buatkan prompt GPT, Midjourney, DALL·E, dan lainnya sesuai kebutuhanmu.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-bold mb-2">Pengetikan</h3>
+        <p>Ketik ulang tugas, makalah, jurnal, cepat dan rapi.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-bold mb-2">Desain & Editing</h3>
+        <p>Desain logo, edit video, foto, reels, TikTok, CV, dll.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="400">
+        <h3 class="text-xl font-bold mb-2">Nyanyi / Voice Over</h3>
+        <p>Jasa rekaman suara untuk konten, podcast, atau lagu custom.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="500">
+        <h3 class="text-xl font-bold mb-2">Joki Tugas</h3>
+        <p>Membantu tugas sekolah/kuliah secara cepat dan terpercaya.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="bg-white rounded-2xl p-6 shadow-lg hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay="600">
+        <h3 class="text-xl font-bold mb-2">Joki Game</h3>
+        <p>Push rank, leveling, grinding, dan lainnya untuk berbagai game.</p>
+      </div>
+    </div>
+
+    <!-- Tombol WhatsApp -->
+    <div class="text-center mt-14" data-aos="zoom-in">
+      <a
+        href="https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20dengan%20jasa%20Anda"
+        target="_blank"
+        class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition duration-300"
+      >
+        Pesan via WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm py-8 bg-black text-gray-400">
+    &copy; 2025 Lazuardi Jasa Digital. All rights reserved.
   </footer>
 
-  <!-- SCRIPT -->
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    const toggle = document.getElementById('toggle-dark');
-    toggle.addEventListener('click', () => {
-      document.body.classList.toggle('dark');
-      toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
-    });
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    AOS.init();
   </script>
 
 </body>
