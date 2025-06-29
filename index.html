@@ -1,95 +1,72 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="transition-colors duration-300">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lazuardi | Jasa Digital</title>
-
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="gue.jpeg">
+  <script src="script.js" defer></script>
 </head>
-<body class="relative text-white bg-black overflow-x-hidden">
-
-  <!-- Video Background -->
-  <video autoplay muted loop playsinline class="fixed top-0 left-0 w-full h-full object-cover -z-10">
-    <source src="tech.mp4" type="video/mp4">
-  </video>
-  <div class="absolute inset-0 bg-black bg-opacity-60 -z-10"></div>
-
-  <!-- Foto Diri -->
-  <img src="gue.jpeg" alt="Foto Diri" class="fixed top-4 left-4 w-14 h-14 rounded-full border-2 border-white shadow-lg animate-fade-in">
-
-  <!-- Navigasi -->
-<header class="w-full fixed top-0 left-0 z-50 bg-black bg-opacity-60 backdrop-blur-md">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-    <div class="text-white font-bold text-lg">LZ Corp</div>
-    <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
-      ☰
-    </button>
-    <nav id="menu" class="hidden md:flex gap-6 font-semibold text-white text-sm md:text-base">
-      <a href="index.html" class="nav-3d">Beranda</a>
-      <a href="product.html" class="nav-3d">Produk</a>
-      <a href="service.html" class="nav-3d">Layanan</a>
-      <a href="about.html" class="nav-3d">Tentang</a>
-    </nav>
-  </div>
-  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-    <a href="index.html" class="block py-2 nav-3d">Beranda</a>
-    <a href="product.html" class="block py-2 nav-3d">Produk</a>
-    <a href="service.html" class="block py-2 nav-3d">Layanan</a>
-    <a href="about.html" class="block py-2 nav-3d">Tentang</a>
-  </div>
-</header>
-
-
-  <!-- Hero -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-6">
-    <h1 class="text-4xl md:text-6xl font-bold mb-6 typewriter" id="typing"></h1>
-    <p class="text-xl max-w-2xl">Kami menyediakan jasa Prompt AI, Desain, Pengetikan, Editing, Joki Game & Tugas, Voice Over, dan lainnya.</p>
+<body class="bg-white text-black dark:bg-black dark:text-white">
+  <nav class="text-center p-4 space-x-4">
+    <a href="index.html" class="font-bold underline">Beranda</a>
+    <a href="product.html" class="hover:underline">Produk</a>
+    <a href="service.html" class="hover:underline">Layanan</a>
+  </nav>
+  <section class="relative text-center py-32 px-4 text-white overflow-hidden">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="tech.mp4" type="video/mp4" />
+    </video>
+    <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">
+        <span id="typing" class="typewriter"></span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-100 max-w-xl mx-auto">
+        Jual Prompt AI, Desain, Pengetikan, Editing, Joki & Voice Service.
+      </p>
+    </div>
   </section>
 
-  <!-- Layanan -->
-  <section class="py-20 px-6">
+  <!-- Layanan (klik menuju halaman layanan) -->
+  <section class="py-20 px-6 bg-gray-100 dark:bg-gray-900">
     <h2 class="text-3xl font-bold text-center mb-10">Layanan Kami</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-      <div class="card-3d">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-black dark:text-white max-w-6xl mx-auto">
+      <a href="layanan-prompt.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
         <h3 class="text-xl font-bold mb-2">Prompt AI</h3>
-        <p>Kustom prompt GPT, Midjourney, dan lainnya.</p>
-      </div>
-      <div class="card-3d">
+        <p>Kustom prompt GPT, Midjourney, DALL·E, dsb.</p>
+      </a>
+      <a href="layanan-ngetik.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
         <h3 class="text-xl font-bold mb-2">Pengetikan Cepat</h3>
         <p>Makalah, laporan, tugas kuliah.</p>
-      </div>
-      <div class="card-3d">
+      </a>
+      <a href="layanan-desain.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
         <h3 class="text-xl font-bold mb-2">Desain & Editing</h3>
-        <p>Logo, CV, Reels, TikTok, Video.</p>
-      </div>
-      <div class="card-3d">
-        <h3 class="text-xl font-bold mb-2">Voice / Nyanyi</h3>
-        <p>Voice over dan rekaman lagu profesional.</p>
-      </div>
-      <div class="card-3d">
+        <p>Logo, video, reels, TikTok, CV, presentasi.</p>
+      </a>
+      <a href="layanan-nyanyi.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
+        <h3 class="text-xl font-bold mb-2">Nyanyi / VO</h3>
+        <p>Voice over & rekaman lagu/konten kamu.</p>
+      </a>
+      <a href="layanan-joki-tugas.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
         <h3 class="text-xl font-bold mb-2">Joki Tugas</h3>
-        <p>Selesaikan tugas cepat dan rapi.</p>
-      </div>
-      <div class="card-3d">
+        <p>Selesaikan tugas sekolah/kuliah dengan cepat & rapi.</p>
+      </a>
+      <a href="layanan-joki-game.html" class="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition block">
         <h3 class="text-xl font-bold mb-2">Joki Game</h3>
-        <p>Push rank, farming, leveling.</p>
-      </div>
+        <p>Push rank, farming, leveling berbagai game populer.</p>
+      </a>
     </div>
     <div class="text-center mt-12">
-      <a href="https://wa.me/6285691153662?text=Halo%20saya%20tertarik%20dengan%20jasa%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all">Chat via WhatsApp</a>
+      <a href="https://wa.me/6285691153662?text=Halo%20saya%20tertarik%20dengan%20jasa%20Anda" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition">
+        Pesan via WhatsApp
+      </a>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm py-6 text-gray-300">
-    &copy; 2025 LZ corp. Dibuat dengan ❤️ dan TailwindCSS.
+  <footer class="text-center text-sm py-8 bg-white dark:bg-black text-gray-600 dark:text-gray-400">
+    &copy; 2025 LZ corp.
   </footer>
-
-  <!-- Script -->
-  <script src="script.js"></script>
 </body>
 </html>
