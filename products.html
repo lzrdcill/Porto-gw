@@ -1,69 +1,33 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="transition-colors duration-300">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Produk Digital - Lazuardi</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Produk | Lazuardi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-white text-black dark:bg-black dark:text-white">
 
-  <!-- NAVBAR -->
-  <nav>
-    <ul class="navbar">
-      <li><a href="index.html">Beranda</a></li>
-      <li><a href="services.html">Jasa</a></li>
-      <li><a href="products.html">Produk</a></li>
-      <li><a href="portfolio.html">Portofolio</a></li>
-      <li><a href="about.html">Tentang</a></li>
-      <li><a href="contact.html">Kontak</a></li>
-      <li><button id="toggle-dark">🌙</button></li>
-    </ul>
+  <nav class="text-center p-4 space-x-4">
+    <a href="index.html" class="hover:underline">Beranda</a>
+    <a href="product.html" class="font-bold underline">Produk</a>
+    <a href="service.html" class="hover:underline">Layanan</a>
   </nav>
 
-  <!-- PRODUK DIGITAL -->
-  <section class="service-section">
-    <h1>Produk Digital Siap Pakai</h1>
-    <div class="service-grid">
-
-      <div class="service-card reveal">
-        <h2>📦 100 Prompt AI Premium</h2>
-        <p>Kumpulan prompt ChatGPT untuk bisnis, konten, desain, riset, dll. Format PDF + Excel.</p>
-        <a href="#" class="btn secondary">Beli Sekarang</a>
+  <main class="max-w-4xl mx-auto py-16 px-6">
+    <h1 class="text-3xl font-bold mb-8 text-center">Produk Digital</h1>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow card-hover">
+        <h2 class="text-xl font-bold">Prompt AI</h2>
+        <p>Prompt Midjourney, ChatGPT, Notion AI siap pakai.</p>
       </div>
-
-      <div class="service-card reveal">
-        <h2>🎨 Template Canva / Desain</h2>
-        <p>Template Instagram, story jualan, banner promosi, bisa di-edit ulang di Canva.</p>
-        <a href="#" class="btn secondary">Lihat Produk</a>
+      <div class="bg-white dark:bg-gray-800 p-6 rounded shadow card-hover">
+        <h2 class="text-xl font-bold">Template Desain</h2>
+        <p>Canva, Figma, dan PowerPoint editable premium.</p>
       </div>
-
-      <div class="service-card reveal">
-        <h2>🧰 Paket Suara Voice Over</h2>
-        <p>30+ sample suara karakter, narasi, iklan (MP3). Cocok untuk konten kreator.</p>
-        <a href="#" class="btn secondary">Coba Demo</a>
-      </div>
-
-      <div class="service-card reveal">
-        <h2>🧠 Prompt Midjourney Unik</h2>
-        <p>Prompt siap pakai untuk menghasilkan visual estetis dengan Midjourney v6+.</p>
-        <a href="#" class="btn secondary">Download Prompt</a>
-      </div>
-
-      <div class="service-card reveal">
-        <h2>🎬 Video Overlay & Stiker</h2>
-        <p>Paket transisi, efek teks, dan stiker untuk konten video TikTok/Reels kamu.</p>
-        <a href="#" class="btn secondary">Dapatkan Sekarang</a>
-      </div>
-
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Lazuardi Mahdi Hakim. Produk digital bisa langsung dipakai cuan! 💸</p>
-  </footer>
+  </main>
 
   <script src="script.js"></script>
 </body>

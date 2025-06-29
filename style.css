@@ -1,13 +1,43 @@
+/* Global Smooth Scroll */
 html {
   scroll-behavior: smooth;
 }
+
+/* Gaya kursor default */
 body {
   cursor: default;
 }
+
+/* Efek hover lembut untuk link */
+a:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Kartu layanan: efek saat hover */
 .card-hover {
   transition: all 0.3s ease-in-out;
 }
+
 .card-hover:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Efek animasi glowing untuk judul */
+.animate-glow {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #0ea5e9, 0 0 20px #0ea5e9;
+  }
+  to {
+    text-shadow: 0 0 20px #3b82f6, 0 0 30px #3b82f6;
+  }
+}
+
+/* Tampilan tombol lebih lembut saat dihover */
+button, .btn {
+  transition: all 0.3s ease-in-out;
 }
