@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel - LZ Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white font-poppins min-h-screen flex items-center justify-center">
+  <div id="loginSection" class="max-w-md w-full p-6 bg-gray-900 rounded-xl shadow-lg">
+    <h2 class="text-2xl font-bold mb-4 text-center">Admin Login</h2>
+    <input type="password" id="passwordInput" placeholder="Masukkan password admin" class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600 mb-4" />
+    <button onclick="checkPassword()" class="w-full bg-blue-500 hover:bg-blue-600 py-3 rounded text-white font-bold transition">Masuk</button>
+    <p id="errorText" class="text-red-500 text-sm mt-2 hidden">Password salah. Coba lagi.</p>
+  </div>
+
+  <div id="adminContent" class="hidden text-left max-w-4xl w-full p-6">
+    <h2 class="text-3xl font-bold mb-6">Selamat datang, Admin 👋</h2>
+    <p class="mb-4">Saat ini sistem belum memiliki database otomatis. Semua order masuk lewat WhatsApp.</p>
+    <ul class="list-disc ml-5 space-y-2 mb-8">
+      <li>Buka <a href="https://web.whatsapp.com/" target="_blank" class="text-green-400 underline">WhatsApp Web</a>.</li>
+      <li>Periksa pesan dari pelanggan yang masuk ke nomor <strong>0856-9115-3662</strong>.</li>
+      <li>Data order sudah otomatis diformat oleh form HTML (nama, layanan, kontak, deskripsi).</li>
+      <li>Gunakan spreadsheet/manual tracking untuk mencatat pesanan yang selesai.</li>
+    </ul>
+
+    <div class="bg-gray-800 p-6 rounded-xl mb-8">
+      <h3 class="text-xl font-bold mb-4">📊 Dashboard Statistik (simulasi)</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+          <h4 class="text-2xl font-bold" id="stat-total">0</h4>
+          <p>Total Pesanan</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+          <h4 class="text-2xl font-bold" id="stat-done">0</h4>
+          <p>Pesanan Selesai</p>
+        </div>
+        <div class="bg-gray-700 p-4 rounded-lg text-center">
+          <h4 class="text-2xl font-bold" id="stat-pending">0</h4>
+          <p>Menunggu Proses</p>
+        </div>
+      </div>
+      <div class="mt-4 flex gap-4">
+        <button onclick="updateStats()" class="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded font-bold">Update Statistik</button>
+        <button onclick="resetStats()" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded font-bold">Reset</button>
+      </div>
+    </div>
+
+    <button onclick="logout()" class="mt-4 bg-red-500 hover:bg-red-600 py-2 px-6 rounded text-white font-bold">Keluar</button>
+  </div>
+
+  <script>
+    const ADMIN_TOKEN = 'lz-token-987';
+
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      const correct = 'admin123';
+
+      if (input === correct) {
+        localStorage.setItem('admin_token', ADMIN_TOKEN);
+        showAdmin();
+      } else {
+        document.getElementById('errorText').classList.remove('hidden');
+      }
+    }
+
+    function showAdmin() {
+      document.getElementById('loginSection').classList.add('hidden');
+      document.getElementById('adminContent').classList.remove('hidden');
+      loadStats();
+    }
+
+    function logout() {
+      localStorage.removeItem('admin_token');
+      document.getElementById('adminContent').classList.add('hidden');
+      document.getElementById('loginSection').classList.remove('hidden');
+      document.getElementById('passwordInput').value = '';
+      document.getElementById('errorText').classList.add('hidden');
+    }
+
+    function loadStats() {
+      document.getElementById('stat-total').textContent = localStorage.getItem('stat_total') || 0;
+      document.getElementById('stat-done').textContent = localStorage.getItem('stat_done') || 0;
+      document.getElementById('stat-pending').textContent = localStorage.getItem('stat_pending') || 0;
+    }
+
+    function updateStats() {
+      const total = prompt('Masukkan total pesanan:', localStorage.getItem('stat_total') || '0');
+      const done = prompt('Masukkan pesanan selesai:', localStorage.getItem('stat_done') || '0');
+      const pending = prompt('Masukkan pesanan menunggu:', localStorage.getItem('stat_pending') || '0');
+
+      if (total !== null && done !== null && pending !== null) {
+        localStorage.setItem('stat_total', total);
+        localStorage.setItem('stat_done', done);
+        localStorage.setItem('stat_pending', pending);
+        loadStats();
+      }
+    }
+
+    function resetStats() {
+      localStorage.removeItem('stat_total');
+      localStorage.removeItem('stat_done');
+      localStorage.removeItem('stat_pending');
+      loadStats();
+    }
+
+    window.onload = () => {
+      const token = localStorage.getItem('admin_token');
+      if (token === ADMIN_TOKEN) {
+        showAdmin();
+      }
+    };
+  </script>
+</body>
+</html>

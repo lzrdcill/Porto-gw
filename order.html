@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Form Pemesanan - LZ Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-black text-white font-poppins">
+
+  <!-- Navbar -->
+  <nav class="flex flex-col md:flex-row justify-between items-center px-6 py-4 bg-black gap-2">
+    <h1 class="text-xl font-bold">LZ Corp</h1>
+    <ul class="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
+      <li><a href="index.html" class="hover:underline">Beranda</a></li>
+      <li><a href="products.html" class="hover:underline">Produk</a></li>
+      <li><a href="service.html" class="hover:underline">Layanan</a></li>
+      <li><a href="order.html" class="underline font-semibold">Order</a></li>
+      <li><a href="admin.html" class="hover:underline">Admin</a></li>
+    </ul>
+  </nav>
+
+  <!-- Form Section -->
+  <section class="py-16 px-6 max-w-2xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-center">Formulir Pemesanan</h2>
+    <form id="orderForm" class="space-y-6">
+      <div>
+        <label for="nama" class="block mb-2">Nama Lengkap</label>
+        <input type="text" id="nama" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600">
+      </div>
+      <div>
+        <label for="layanan" class="block mb-2">Pilih Layanan</label>
+        <select id="layanan" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600">
+          <option value="">-- Pilih --</option>
+          <option>Prompt AI</option>
+          <option>Pengetikan Cepat</option>
+          <option>Desain & Editing</option>
+          <option>Voice Over / Nyanyi</option>
+          <option>Joki Tugas</option>
+          <option>Joki Game</option>
+        </select>
+      </div>
+      <div>
+        <label for="kontak" class="block mb-2">Kontak WhatsApp / Email</label>
+        <input type="text" id="kontak" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600">
+      </div>
+      <div>
+        <label for="deskripsi" class="block mb-2">Deskripsi Permintaan</label>
+        <textarea id="deskripsi" rows="5" required class="w-full p-3 rounded bg-gray-800 text-white border border-gray-600" placeholder="Contoh: Saya butuh prompt untuk presentasi AI..."></textarea>
+      </div>
+      <button type="submit" class="w-full bg-green-500 hover:bg-green-600 py-3 rounded text-white font-bold transition">Kirim via WhatsApp</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm py-8 text-gray-400">
+    &copy; 2025 LZ Corp.
+  </footer>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const nama = document.getElementById('nama').value.trim();
+      const layanan = document.getElementById('layanan').value.trim();
+      const kontak = document.getElementById('kontak').value.trim();
+      const deskripsi = document.getElementById('deskripsi').value.trim();
+
+      const message = `Halo, saya ingin order layanan di LZ Corp.%0A%0A` +
+        `Nama: ${nama}%0ALayanan: ${layanan}%0AKontak: ${kontak}%0ADeskripsi: ${deskripsi}`;
+
+      window.open(`https://wa.me/6285691153662?text=${message}`, '_blank');
+    });
+  </script>
+</body>
+</html>
