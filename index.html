@@ -1,24 +1,59 @@
-<!-- Kita mulai dengan kerangka awal: index.html, halaman utama -->
-<!-- File lengkap lainnya akan menyusul satu per satu secara terstruktur -->
-
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LZ Corp - Jasa Digital</title>
+  
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- SEO & Metadata -->
+  <meta name="description" content="LZ Corp menyediakan jasa Prompt AI, Pengetikan, Desain, Editing, Voice Over, dan Joki Game/Tugas secara profesional." />
+  <meta name="keywords" content="jasa digital, prompt AI, desain, editing, voice over, pengetikan, joki tugas, joki game" />
+  <meta name="author" content="LZ Corp" />
+  <meta property="og:title" content="LZ Corp - Jasa Digital Terpercaya" />
+  <meta property="og:description" content="Temukan berbagai layanan digital seperti Prompt AI, Desain, Editing, dan Joki Tugas di LZ Corp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://example.com/images/thumb.jpg" />
+  <meta property="og:url" content="https://lzrdcill.github.io/Porto-gw/" />
+
+  <!-- Google Analytics (ganti ID di bawah dengan punyamu) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-lzrdcill"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXX');
+  </script>
 </head>
 <body class="bg-black text-white font-poppins">
+  <!-- Hero Section -->
   <header class="relative h-screen overflow-hidden">
     <video autoplay muted loop playsinline class="absolute w-full h-full object-cover z-[-1]">
       <source src="tech.mp4" type="video/mp4">
     </video>
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+    <!-- Navbar -->
     <nav class="flex justify-between items-center px-6 py-4 relative z-10">
       <h1 class="text-xl font-bold">LZ Corp</h1>
       <ul class="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
@@ -28,6 +63,8 @@
         <li><a href="about.html" class="hover:underline">Tentang</a></li>
       </ul>
     </nav>
+
+    <!-- Hero Content -->
     <div class="flex flex-col items-center justify-center h-full text-center px-4 relative z-10">
       <h2 class="text-4xl md:text-6xl font-bold mb-4">
         <span id="typing" class="typewriter"></span>
@@ -36,6 +73,7 @@
     </div>
   </header>
 
+  <!-- Layanan Section -->
   <section class="py-20 px-6 bg-white text-black dark:bg-gray-900 dark:text-white">
     <h2 class="text-3xl font-bold text-center mb-10">Layanan Kami</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -48,6 +86,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="text-center text-sm py-8 bg-black text-gray-400">
     &copy; 2025 LZ Corp.
   </footer>
